@@ -7,8 +7,8 @@ class Nav extends Component {
   render() {
 
     return (
-      <div>
-        <ul>
+      <div className='nav'>
+        <ul className='nav-list'>
           <li>
             <Link to="/dashboard">Home</Link>
           </li>
