@@ -1,11 +1,33 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+// import { username, profilePic } from "../../ducks/reducer";
 
 class Nav extends Component {
-    render() {
-        return(
-            <div>This is the Nav Component</div>
-        )
-    }
+  render() {
+
+    return (
+      <div>
+        <ul>
+          <li>
+            <Link to="/dashboard">Home</Link>
+          </li>
+          <li>
+            <Link to="/new">New Post</Link>
+          </li>
+          <li>
+            <Link to="/">Logout</Link>
+          </li>
+        </ul>
+      </div>
+    );
+  }
 }
 
-export default Nav;
+const mapStateToProps = (state) => {
+    return {
+        username: state.user.username,
+        profilePic: state.user.profilePic
+    }
+  };
+export default connect(mapStateToProps)(Nav);
