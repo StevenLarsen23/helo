@@ -4,10 +4,18 @@ import { connect } from "react-redux";
 // import { username, profilePic } from "../../ducks/reducer";
 
 class Nav extends Component {
+  // componentDidUpdate(previousProps) {
+  //   if(previousProps.username !== this.props.username) {
+  //     this.render()
+  //   }
+  //   console.log('nav mounted', this.props)
+  // }
   render() {
-
+    console.log(this.props)
     return (
       <div className='nav'>
+        {this.props.username}
+        {this.props.profilePic}
         <ul className='nav-list'>
           <li>
             <Link to="/dashboard">Home</Link>
@@ -24,10 +32,12 @@ class Nav extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+
+const mapStateToProps = (reduxState) => {
     return {
-        username: state.user.username,
-        profilePic: state.user.profilePic
+        username: reduxState.username,
+        profilePic: reduxState.profilePic
     }
+    
   };
 export default connect(mapStateToProps)(Nav);
