@@ -27,5 +27,5 @@ VALUES
 INSERT INTO posts
 (title, img, content, author_id)
 VALUES
-('Justice', 'https://upload.wikimedia.org/wikipedia/en/2/26/Justice_League.png', 'this is the content of this post', 5),
-('More Justice', 'https://media.wired.com/photos/5d4cac3dd2da9d0008d24a59/125:94/w_2340,h_1760,c_limit/business_justice-league_BPJMWA.jpg', 'this is the content of this other post', 4);
+('Justice', 'https://upload.wikimedia.org/wikipedia/en/2/26/Justice_League.png', 'this is the content of this post', 9),
+('More Justice', 'https://media.wired.com/photos/5d4cac3dd2da9d0008d24a59/125:94/w_2340,h_1760,c_limit/business_justice-league_BPJMWA.jpg', 'this is the content of this other post', 7);

@@ -33,6 +33,7 @@ massive({
 app.post('/auth/register', ctrl.register)
 app.post('/auth/login', ctrl.login)
 app.post('/auth/logout', ctrl.logout)
-app.get('/api/allPosts', ctrl.getAllPosts)
+app.get('/api/posts/:userid', ctrl.getAllPosts)
+
 
 app.listen(SERVER_PORT, () => console.log(`Welcome to port ${SERVER_PORT}`))

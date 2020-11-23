@@ -45,6 +45,10 @@ module.exports = {
       },
 
       getAllPosts: (req, res) => {
-          
+          const db = req.app.get('db');
+      },
+
+      getPosts: (req, res) => {
+        const db = req.app.get('db');
       }
 };
